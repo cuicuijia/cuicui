@@ -86,6 +86,7 @@ sound.addEventListener('click',()=>{heroVideo.muted=!heroVideo.muted;sound.query
 function setupHeroFilmstrip(){
   const strip=document.querySelector('.filmstrip');
   const preview=document.querySelector('.film-hover-preview');
+  const hero=document.querySelector('.hero');
   const featured=[
     ...source.images.filter(item=>item.folder==='0727_Mj+NanoBanana让详情转化翻倍').slice(0,7),
     ...source.images.filter(item=>item.folder==='0707_AI品牌设计综合应用').slice(0,5),
@@ -103,19 +104,31 @@ function setupHeroFilmstrip(){
     document.querySelector('.film-caption span').textContent=card.dataset.title;
     document.querySelector('.film-caption small').textContent=card.dataset.en;
   }
+  function showPreview(card){
+    paused=true;
+    preview.querySelector('img').src=card.querySelector('img').src;
+    preview.querySelector('img').alt=card.dataset.title;
+    preview.querySelector('strong').textContent=card.dataset.title;
+    preview.querySelector('small').textContent=card.dataset.en;
+    preview.classList.add('show');
+    preview.setAttribute('aria-hidden','false');
+    hero.classList.add('film-is-focused');
+    selectCard(card);
+  }
+  function hidePreview(){
+    preview.classList.remove('show');
+    preview.setAttribute('aria-hidden','true');
+    hero.classList.remove('film-is-focused');
+  }
   strip.querySelectorAll('.film-card').forEach(card=>{
     card.addEventListener('click',()=>selectCard(card));
-    card.addEventListener('pointerenter',()=>{
-      paused=true;preview.querySelector('img').src=card.querySelector('img').src;preview.querySelector('img').alt=card.dataset.title;
-      preview.querySelector('strong').textContent=card.dataset.title;preview.querySelector('small').textContent=card.dataset.en;
-      const rect=card.getBoundingClientRect();
-      preview.style.setProperty('--preview-x',`${Math.max(190,Math.min(innerWidth-190,rect.left+rect.width/2))}px`);
-      preview.classList.add('show');selectCard(card);
-    });
-    card.addEventListener('pointerleave',()=>preview.classList.remove('show'));
+    card.addEventListener('pointerenter',()=>showPreview(card));
+    card.addEventListener('pointerleave',hidePreview);
+    card.addEventListener('focus',()=>showPreview(card));
+    card.addEventListener('blur',hidePreview);
   });
   strip.addEventListener('pointerenter',()=>paused=true);
-  strip.addEventListener('pointerleave',()=>{paused=false;preview.classList.remove('show')});
+  strip.addEventListener('pointerleave',()=>{paused=false;hidePreview()});
   strip.addEventListener('wheel',event=>{if(Math.abs(event.deltaY)>Math.abs(event.deltaX)){event.preventDefault();strip.scrollLeft+=event.deltaY;}},{passive:false});
   let lastTime=performance.now();
   function autoScroll(time){
