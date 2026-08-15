@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="崔崔的 AI 视觉与动态影像个人作品集" />
+  <title>崔崔 · AI Visual Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" aria-hidden="true"><div class="loader-mark">CC<span>®</span></div><div class="loader-line"><i></i></div></div>
+  <div class="cursor" aria-hidden="true"><span>VIEW</span></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand magnetic" href="#home" aria-label="返回首页"><span class="brand-orb">崔</span><b>CUI CUI</b></a>
+    <nav aria-label="主导航">
+      <a href="#about">关于我</a><a href="#works">作品</a><a href="#method">创作方法</a>
+    </nav>
+    <a class="contact-link magnetic" href="#contact">联系方式 <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="崔崔个人作品集">
+      <video class="hero-video" autoplay muted loop playsinline poster="图片/0727_Mj+NanoBanana让详情转化翻倍/01.webp">
+        <source src="视频/《循时·四季全家》品牌广告.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-shade"></div>
+      <button class="sound magnetic" type="button" aria-label="打开或关闭背景视频声音"><i></i><span>SOUND OFF</span></button>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">AI VISUAL DESIGNER · 2026</p>
+        <h1><span>CUI CUI</span><span>PORTFOLIO</span></h1>
+        <p class="hero-lead">用 AI 延展想象，让品牌被看见，也被记住。</p>
+      </div>
+      <div class="hero-meta"><span>SCROLL TO EXPLORE</span><span>35.6762° N · TOKYO</span></div>
+      <div class="filmstrip" aria-label="自动滚动精选作品画廊"></div>
+      <div class="film-hover-preview" aria-hidden="true"><img src="" alt="" /><div><strong></strong><small></small></div></div>
+      <div class="film-caption"><strong>01</strong><div><span>宋韵雅藏</span><small>ORIENTAL FRAGRANCE</small></div></div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="section-kicker"><span>01</span><p>身份介绍 / ABOUT</p></div>
+      <h2 class="mega reveal">CREATIVE<br /><em>BY INSTINCT.</em></h2>
+      <div class="about-grid">
+        <div class="portrait tilt reveal"><img src="图片/0618快速打开AIGC大门：0到1的视觉生产力/仿明代女.webp" alt="仿明代仕女视觉作品" /><span>AI VISUAL STUDY</span></div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">HI, I AM CUI CUI</p>
+          <h3>把想法变成有温度的视觉，<br />把技术变成讲故事的方式。</h3>
+          <p>我是崔崔，一名专注 AIGC 商业视觉与动态内容的创作者。循时香氛、茶道东方茶饮与猫 IP 均是由我从品牌概念、虚构产品、造型审美到视觉系统独立设计的原创系列，并非市售品牌。其余课题记录了我对不同工具、风格与商业场景的持续练习。</p>
+          <div class="identity-cards">
+            <article><small>当前身份</small><b>AI Visual Creator</b></article>
+            <article><small>服务方向</small><b>品牌视觉 / AI 视频 / 电商设计</b></article>
+            <article><small>工作方式</small><b>策略 → 生成 → 精修 → 交付</b></article>
+            <article><small>合作状态</small><b class="available">OPEN FOR PROJECTS</b></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="style section">
+      <div class="section-kicker"><span>02</span><p>原创系列 / ORIGINAL SERIES</p></div>
+      <div class="style-head reveal"><h2>从一个不存在的品牌开始，<br />构造完整而可信的世界。</h2><p>三个重点系列均为崔崔原创虚构品牌与产品。点击卡片进入系列，查看从产品造型、文化概念到海报与动态广告的完整设计。</p></div>
+      <div class="style-row folder-cards" id="folderCards" aria-label="原创重点系列"></div>
+    </section>
+
+    <section class="works section" id="works">
+      <div class="section-kicker light"><span>03</span><p>完整作品档案 / ORIGINAL & PRACTICE ARCHIVE</p></div>
+      <div class="works-head"><h2 class="reveal">WORKS<sup id="totalCount">0</sup></h2></div>
+      <div class="folder-toolbar"><div class="filters" id="folderFilters" role="group" aria-label="作品文件夹筛选"></div><p id="resultSummary"></p></div>
+      <div class="work-grid" id="workGrid"></div>
+      <div class="pagination"><button class="page-prev" aria-label="上一页">←</button><div class="page-numbers"></div><button class="page-next" aria-label="下一页">→</button></div>
+    </section>
+
+    <section class="method section" id="method">
+      <div class="method-aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="section-kicker"><span>04</span><p>创作框架 / CREATIVE SYSTEM</p></div>
+      <h2 class="mega method-title reveal"><span data-text="FROM BRIEF">FROM BRIEF</span><em data-text="TO IMPACT.">TO IMPACT.</em></h2>
+      <div class="steps">
+        <article class="process-card tilt" data-step="01"><div class="process-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="27" cy="27" r="15"/><path d="m38 38 14 14M20 27h14M27 20v14"/></svg></div><span>01 / DISCOVER</span><h3>定义问题</h3><p>理解受众、场景与品牌目标，先确认为什么做，再决定做什么。</p><div class="process-tags"><b>INSIGHT</b><b>STRATEGY</b></div></article>
+        <article class="process-card tilt" data-step="02"><div class="process-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 9 52 29 32 55 12 29 32 9Z"/><circle cx="32" cy="30" r="7"/><path d="M32 15v8M32 37v11"/></svg></div><span>02 / DEFINE</span><h3>搭建风格</h3><p>提炼关键词，建立情绪板、色彩、材质、构图和镜头规则。</p><div class="process-tags"><b>MOOD</b><b>SYSTEM</b></div></article>
+        <article class="process-card tilt" data-step="03"><div class="process-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="m13 43 21-26 17 12-21 26-17-12Z"/><path d="M43 9v8M39 13h8M14 13v10M9 18h10M50 43v10M45 48h10"/></svg></div><span>03 / GENERATE</span><h3>生成迭代</h3><p>组合多模型工作流，以可控变量快速探索并筛选最佳方向。</p><div class="process-tags"><b>EXPLORE</b><b>CREATE</b></div></article>
+        <article class="process-card tilt" data-step="04"><div class="process-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="m12 22 20-11 20 11v24L32 57 12 46V22Z"/><path d="m12 22 20 12 20-12M32 34v23M24 23l6 6 12-12"/></svg></div><span>04 / DELIVER</span><h3>精修交付</h3><p>统一细节、版式与动态节奏，输出适配不同媒介的完整资产。</p><div class="process-tags"><b>POLISH</b><b>LAUNCH</b></div></article>
+      </div>
+      <div class="notice-grid">
+        <article class="notice"><div class="notice-sigil" aria-hidden="true"><i></i><i></i><b>!</b></div><p>注意点 / PRINCIPLES</p><h3>AI 是放大创意的工具，<br />判断力才是作品的核心。</h3><ul><li class="micro-item" data-icon="01">不让风格盖过信息</li><li class="micro-item" data-icon="02">不以生成数量代替筛选质量</li><li class="micro-item" data-icon="03">关注品牌一致性与可延展性</li><li class="micro-item" data-icon="04">对人物、文字和产品细节持续精修</li></ul></article>
+        <article class="extra"><div class="tool-sigil" aria-hidden="true"><i></i><i></i><i></i><b>✦</b></div><p>信息补充 / TOOLKIT</p><div class="ticker"><span class="micro-item" data-icon="MJ">MIDJOURNEY</span><span class="micro-item" data-icon="SD">STABLE DIFFUSION</span><span class="micro-item" data-icon="JM">JIMENG</span><span class="micro-item" data-icon="PS">PHOTOSHOP</span><span class="micro-item" data-icon="PR">PREMIERE</span><span class="micro-item" data-icon="AE">AFTER EFFECTS</span></div><div class="extra-bottom"><b class="micro-item">静态视觉</b><b class="micro-item">动态影像</b><b class="micro-item">品牌方案</b><b class="micro-item">内容适配</b></div></article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-glow"></div>
+      <div class="section-kicker light"><span>05</span><p>联系合作 / CONTACT</p></div>
+      <h2 class="reveal">LET'S CREATE<br />A <em>GOOD</em> START <span>↘</span></h2>
+      <div class="contact-bottom"><a class="brand footer-brand" href="#home"><span class="brand-orb">崔</span><b>CUI CUI</b></a><div class="contact-card panel-interactive tilt"><div class="contact-info"><small>CONTACT / 05</small><p>期待与品牌、工作室和有趣的人一起，<br />把一个好想法推得更远。</p><dl><div><dt>EMAIL</dt><dd><a href="mailto:cuijia_cigar@hotmail.com">cuijia_cigar@hotmail.com <span>↗</span></a></dd></div><div><dt>PHONE</dt><dd><a href="tel:+818070111923">+81 080-7011-1923 <span>↗</span></a></dd></div></dl></div><div class="wechat-qr"><div class="qr-frame"><img src="Image_20260815005245_96_1.jpg" alt="崔佳微信二维码" /></div><div><b>WECHAT</b><span>扫码添加崔佳</span></div></div></div></div>
+    </section>
+  </main>
+
+  <dialog class="work-dialog">
+    <button class="dialog-close" aria-label="关闭">×</button>
+    <div class="dialog-media"><img src="" alt="" /><video controls playsinline></video></div>
+    <div class="dialog-copy"><small></small><h2></h2><p></p><div><span>AI ART DIRECTION</span><span>VISUAL DESIGN</span></div></div>
+  </dialog>
+  <script src="portfolio-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
