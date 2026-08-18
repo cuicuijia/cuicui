@@ -142,9 +142,14 @@ function setupHeroFilmstrip(){
       if(isOpen)hidePreview(true);else showPreview(card);
     });
     card.addEventListener('click',event=>{
-      if(performance.now()-lastTouchActivation<700)return;
-      event.preventDefault();
-      showPreview(card);
+      if(isTouchLayout()){
+        if(performance.now()-lastTouchActivation<700)return;
+        event.preventDefault();
+        const isOpen=preview.classList.contains('show')&&card.classList.contains('active');
+        if(isOpen)hidePreview(true);else showPreview(card);
+        return;
+      }
+      selectCard(card);
     });
     card.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch'&&!isTouchLayout())showPreview(card)});
     card.addEventListener('pointerleave',event=>{if(event.pointerType!=='touch'&&!isTouchLayout())hidePreview()});
