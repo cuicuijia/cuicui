@@ -87,6 +87,8 @@ function setupHeroFilmstrip(){
   const strip=document.querySelector('.filmstrip');
   const preview=document.querySelector('.film-hover-preview');
   const hero=document.querySelector('.hero');
+  const coarsePointer=matchMedia('(pointer: coarse)');
+  const isTouchLayout=()=>coarsePointer.matches||innerWidth<=900;
   const featured=[
     ...source.images.filter(item=>item.folder==='0727_Mj+NanoBanana让详情转化翻倍').slice(0,7),
     ...source.images.filter(item=>item.folder==='0707_AI品牌设计综合应用').slice(0,5),
@@ -115,21 +117,34 @@ function setupHeroFilmstrip(){
     hero.classList.add('film-is-focused');
     selectCard(card);
   }
-  function hidePreview(){
+  function hidePreview(resume=false){
     preview.classList.remove('show');
     preview.setAttribute('aria-hidden','true');
     hero.classList.remove('film-is-focused');
+    if(resume)paused=false;
   }
   strip.querySelectorAll('.film-card').forEach(card=>{
-    card.addEventListener('click',()=>selectCard(card));
-    card.addEventListener('pointerenter',()=>showPreview(card));
-    card.addEventListener('pointerleave',hidePreview);
-    card.addEventListener('focus',()=>showPreview(card));
-    card.addEventListener('blur',hidePreview);
+    card.addEventListener('click',()=>{
+      if(isTouchLayout()){
+        const isOpen=preview.classList.contains('show')&&card.classList.contains('active');
+        if(isOpen)hidePreview(true);else showPreview(card);
+        return;
+      }
+      selectCard(card);
+    });
+    card.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch'&&!isTouchLayout())showPreview(card)});
+    card.addEventListener('pointerleave',event=>{if(event.pointerType!=='touch'&&!isTouchLayout())hidePreview()});
+    card.addEventListener('focus',()=>{if(!isTouchLayout())showPreview(card)});
+    card.addEventListener('blur',()=>{if(!isTouchLayout())hidePreview()});
   });
-  strip.addEventListener('pointerenter',()=>paused=true);
-  strip.addEventListener('pointerleave',()=>{paused=false;hidePreview()});
+  strip.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch'&&!isTouchLayout())paused=true});
+  strip.addEventListener('pointerleave',event=>{if(event.pointerType!=='touch'&&!isTouchLayout())hidePreview(true)});
   strip.addEventListener('wheel',event=>{if(Math.abs(event.deltaY)>Math.abs(event.deltaX)){event.preventDefault();strip.scrollLeft+=event.deltaY;}},{passive:false});
+  preview.addEventListener('click',()=>{if(isTouchLayout())hidePreview(true)});
+  document.addEventListener('pointerdown',event=>{
+    if(isTouchLayout()&&preview.classList.contains('show')&&!strip.contains(event.target)&&!preview.contains(event.target))hidePreview(true);
+  });
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')hidePreview(true)});
   let lastTime=performance.now();
   function autoScroll(time){
     const delta=Math.min(32,time-lastTime);lastTime=time;
