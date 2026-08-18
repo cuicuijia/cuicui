@@ -87,6 +87,11 @@ function setupHeroFilmstrip(){
   const strip=document.querySelector('.filmstrip');
   const preview=document.querySelector('.film-hover-preview');
   const hero=document.querySelector('.hero');
+  const backdrop=document.createElement('button');
+  backdrop.type='button';
+  backdrop.className='film-preview-backdrop';
+  backdrop.setAttribute('aria-label','关闭中央预览');
+  document.body.append(backdrop,preview);
   const coarsePointer=matchMedia('(pointer: coarse)');
   const isTouchLayout=()=>coarsePointer.matches||innerWidth<=900;
   const featured=[
@@ -95,7 +100,7 @@ function setupHeroFilmstrip(){
     ...source.images.filter(item=>item.folder==='0710_MJ品牌IP全案').slice(0,4),
     ...source.images.filter(item=>item.folder==='0730_未来感全开一赛博朋克炫到看不清字').slice(0,2)
   ];
-  const cardMarkup=featured.map((item,i)=>`<button class="film-card ${i===0?'active':''}" data-index="${i}" data-title="${item.name}" data-en="${shortFolder(item.folder)}"><img src="${item.path}" alt="${item.name}" loading="eager"></button>`).join('');
+  const cardMarkup=featured.map((item,i)=>`<button type="button" class="film-card ${i===0?'active':''}" data-index="${i}" data-title="${item.name}" data-en="${shortFolder(item.folder)}"><img src="${item.path}" alt="${item.name}" loading="eager"></button>`).join('');
   strip.innerHTML=cardMarkup+cardMarkup.replaceAll('film-card ','film-card is-clone ');
   let paused=false;
   function selectCard(card){
@@ -115,17 +120,31 @@ function setupHeroFilmstrip(){
     preview.classList.add('show');
     preview.setAttribute('aria-hidden','false');
     hero.classList.add('film-is-focused');
+    document.body.classList.add('film-preview-open');
+    backdrop.classList.add('show');
     selectCard(card);
   }
   function hidePreview(resume=false){
     preview.classList.remove('show');
     preview.setAttribute('aria-hidden','true');
     hero.classList.remove('film-is-focused');
+    document.body.classList.remove('film-preview-open');
+    backdrop.classList.remove('show');
     if(resume)paused=false;
   }
+  let lastTouchActivation=0;
   strip.querySelectorAll('.film-card').forEach(card=>{
-    card.addEventListener('click',()=>{
+    card.addEventListener('pointerup',event=>{
+      if(event.pointerType!=='touch')return;
+      event.preventDefault();
+      lastTouchActivation=performance.now();
+      const isOpen=preview.classList.contains('show')&&card.classList.contains('active');
+      if(isOpen)hidePreview(true);else showPreview(card);
+    });
+    card.addEventListener('click',event=>{
       if(isTouchLayout()){
+        if(performance.now()-lastTouchActivation<700)return;
+        event.preventDefault();
         const isOpen=preview.classList.contains('show')&&card.classList.contains('active');
         if(isOpen)hidePreview(true);else showPreview(card);
         return;
@@ -141,6 +160,7 @@ function setupHeroFilmstrip(){
   strip.addEventListener('pointerleave',event=>{if(event.pointerType!=='touch'&&!isTouchLayout())hidePreview(true)});
   strip.addEventListener('wheel',event=>{if(Math.abs(event.deltaY)>Math.abs(event.deltaX)){event.preventDefault();strip.scrollLeft+=event.deltaY;}},{passive:false});
   preview.addEventListener('click',()=>{if(isTouchLayout())hidePreview(true)});
+  backdrop.addEventListener('click',()=>hidePreview(true));
   document.addEventListener('pointerdown',event=>{
     if(isTouchLayout()&&preview.classList.contains('show')&&!strip.contains(event.target)&&!preview.contains(event.target))hidePreview(true);
   });
