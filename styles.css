@@ -37,7 +37,7 @@
 .film-card img{pointer-events:none}.film-card.is-clone{opacity:.96}
 .film-hover-preview{--preview-x:50%;position:absolute;z-index:8;left:var(--preview-x);bottom:208px;width:clamp(240px,24vw,350px);height:clamp(300px,44vh,430px);padding:9px;border:1px solid rgba(255,255,255,.45);border-radius:20px;background:rgba(9,12,10,.88);box-shadow:0 25px 80px rgba(0,0,0,.55);backdrop-filter:blur(18px);pointer-events:none;opacity:0;transform:translate(-50%,18px) scale(.94);transition:opacity .25s,transform .32s,left .12s}
 .film-hover-preview.show{opacity:1;transform:translate(-50%,0) scale(1)}.film-hover-preview img{height:calc(100% - 48px);object-fit:contain;border-radius:13px;background:#171a17}.film-hover-preview div{height:48px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:4px 8px 0}.film-hover-preview strong{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.film-hover-preview small{font-size:8px;color:var(--acid);letter-spacing:.12em;white-space:nowrap}
-@media(max-width:900px){.film-card,.film-card:hover,.film-card.active{width:120px}.film-hover-preview{display:none}}
+@media(max-width:900px){.film-card,.film-card:hover,.film-card.active{width:120px}}
 
 /* Immersive creative-system section */
 .method{--method-x:50%;--method-y:35%;overflow:hidden;background:radial-gradient(circle 430px at var(--method-x) var(--method-y),rgba(199,255,25,.2),transparent 70%),linear-gradient(135deg,#f4f5ee 0%,#e8ece4 50%,#f7f5ef 100%);isolation:isolate}
@@ -85,11 +85,11 @@
 .hero.film-is-focused .filmstrip{z-index:8}
 .hero.film-is-focused .film-card{filter:brightness(.42) saturate(.55);opacity:.72}
 .hero.film-is-focused .film-card:hover,.hero.film-is-focused .film-card:focus-visible{filter:brightness(1) saturate(1);opacity:1;border-color:var(--acid);box-shadow:0 12px 38px rgba(0,0,0,.65),0 0 0 2px var(--acid)}
-.film-hover-preview{position:fixed;z-index:12;left:50%;top:50%;bottom:auto;width:min(620px,48vw);height:min(720px,74vh);padding:12px;border:1px solid rgba(255,255,255,.34);border-radius:24px;background:rgba(5,9,10,.92);box-shadow:0 45px 140px rgba(0,0,0,.82),0 0 0 1px rgba(199,255,25,.14);backdrop-filter:blur(24px) saturate(1.18);opacity:0;transform:translate(-50%,-46%) scale(.9);transition:opacity .3s,transform .48s cubic-bezier(.2,.85,.2,1)}
-.film-hover-preview.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.film-hover-preview{position:fixed;z-index:12;left:50%;top:50%;bottom:auto;width:min(620px,48vw);height:min(720px,74vh);padding:12px;border:1px solid rgba(255,255,255,.34);border-radius:24px;background:rgba(5,9,10,.92);box-shadow:0 45px 140px rgba(0,0,0,.82),0 0 0 1px rgba(199,255,25,.14);backdrop-filter:blur(24px) saturate(1.18);opacity:0;visibility:hidden;transform:translate(-50%,-46%) scale(.9);transition:opacity .3s,transform .48s cubic-bezier(.2,.85,.2,1),visibility 0s linear .48s}
+.film-hover-preview.show{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1);transition-delay:0s}
 .film-hover-preview img{height:calc(100% - 62px);width:100%;object-fit:contain;border-radius:17px;background:#050707;filter:brightness(1.04) contrast(1.03)}
 .film-hover-preview div{height:62px;padding:8px 10px 0}.film-hover-preview strong{font-size:15px}.film-hover-preview small{font-size:9px}
-@media(max-width:900px){.film-hover-preview{display:none}.hero:after{display:none}.works .work-card img,.works .work-card video{filter:brightness(.62) saturate(.72) contrast(.94) blur(1.5px)}}
+@media(max-width:900px){.film-hover-preview{display:block;width:min(88vw,520px);height:min(68svh,620px);padding:9px;border-radius:20px}.film-hover-preview.show{pointer-events:auto}.film-hover-preview img{height:calc(100% - 54px);border-radius:14px}.film-hover-preview div{height:54px;padding:6px 7px 0}.film-hover-preview strong{font-size:13px}.hero:after{display:block}.works .work-card img,.works .work-card video{filter:brightness(.62) saturate(.72) contrast(.94) blur(1.5px)}}
 @media(prefers-reduced-motion:reduce){.works .work-card,.works .work-card img,.works .work-card video,.film-hover-preview,.hero:after{transition-duration:.01ms!important}}
 
 /* Real contact details and WeChat QR */
