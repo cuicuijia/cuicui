@@ -1,0 +1,425 @@
+:root{--paper:#f3eadb;--ink:#231d17;--gold:#9e7540;--jade:#aebaa5;--serif:"Songti SC","STSong","Noto Serif SC",serif;--sans:"Microsoft YaHei","Noto Sans SC",sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#d8d5cd;color:var(--ink);font-family:var(--sans)}.review-bar{position:sticky;top:0;z-index:100;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;padding:12px 3vw;background:#151817ed;color:#fff;backdrop-filter:blur(14px);box-shadow:0 3px 18px #0004}.review-bar a{color:#cbc9c2;text-decoration:none;font-size:12px}.review-bar div{display:grid}.review-bar small{color:#b6bd59;font-size:9px;letter-spacing:.18em}.review-bar strong{font:18px var(--serif)}.review-bar button{border:0;background:#c7d938;color:#141711;padding:11px 17px;font-weight:700;cursor:pointer}main{display:grid;gap:34px;padding:34px 2.5vw 100px}.sheet{position:relative;width:min(1440px,95vw);aspect-ratio:16/9;margin:auto;overflow:hidden;background:#f9f6ef;box-shadow:0 18px 55px #2224}.portfolio-cover{color:white}.portfolio-cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.cover-shade{position:absolute;inset:0;background:linear-gradient(90deg,#111b 0,#1116 42%,transparent 76%),linear-gradient(0deg,#1118,transparent 50%)}.cover-copy{position:absolute;left:6%;top:14%;max-width:50%}.cover-copy small{font-size:11px;letter-spacing:.2em}.cover-copy h1{margin:10vh 0 3vh;font:clamp(42px,6vw,88px)/1.07 var(--serif);letter-spacing:.04em}.cover-copy p{font-size:14px;letter-spacing:.18em}.project-block{display:grid;gap:34px}.project-opener{display:flex;align-items:flex-end;padding:6%;color:white}.project-opener::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#111d,#1117 50%,transparent);z-index:1}.project-opener img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.project-opener .opening-copy{position:relative;z-index:2;max-width:48%}.project-opener small,.chapter-copy small{font-size:10px;letter-spacing:.18em}.project-opener h2{font:clamp(42px,6vw,82px)/1 var(--serif);margin:14px 0}.project-opener p{font-size:15px;line-height:1.9}.visual-page{display:grid;grid-template-columns:34% 66%;padding:0}.chapter-copy{position:relative;z-index:5;padding:10% 7% 8% 12%;align-self:start}.chapter-copy h3{font:clamp(32px,4vw,58px)/1.2 var(--serif);margin:18px 0}.chapter-copy p{font-size:13px;line-height:1.9;max-width:32em;color:#6f665b}.media-stage{position:relative;display:flex;align-items:center;justify-content:center;gap:2.2%;min-width:0;padding:4% 5% 4% 1%;overflow:visible}.media-stage figure{position:relative;margin:0;flex:0 0 auto;max-width:100%;max-height:100%;overflow:visible}.media-stage img,.media-stage video{display:block;width:100%;height:auto;max-width:100%;max-height:100%;object-fit:contain}.visual-page[data-count="1"] .media-stage figure.landscape,.visual-page[data-kind="storyboard"] .media-stage figure{width:94%}.visual-page[data-count="1"] .media-stage figure.portrait{height:86%;width:auto;aspect-ratio:var(--ratio)}.visual-page[data-count="1"] .media-stage figure.portrait img{width:auto;height:100%}.visual-page[data-count="1"] .media-stage figure.square{width:68%}.visual-page[data-count="2"] .media-stage figure.landscape{width:48%}.visual-page[data-count="2"] .media-stage figure.portrait{height:76%;width:auto;aspect-ratio:var(--ratio)}.visual-page[data-count="2"] .media-stage figure.portrait img{width:auto;height:100%}.visual-page[data-count="2"] .media-stage figure:first-child{transform:translateY(-7%)}.visual-page[data-count="2"] .media-stage figure:last-child{transform:translateY(9%)}.visual-page[data-count="3"] .media-stage{flex-wrap:wrap;align-content:center}.visual-page[data-count="3"] .media-stage figure{width:44%}.visual-page[data-count="3"] .media-stage figure:nth-child(2){transform:translateY(12%)}.visual-page[data-count="3"] .media-stage figure:nth-child(3){transform:translate(-8%,-3%)}.video-page{grid-template-columns:27% 73%}.video-page .media-stage{background:#0b1112;padding:5%}.video-page figure{width:94%!important;max-height:90%;aspect-ratio:var(--ratio);display:flex;align-items:center}.video-page video{width:100%;height:100%;background:#090d0e}.video-page figure.portrait{height:88%;width:auto!important}.storyboard-page{grid-template-columns:25% 75%}.storyboard-page .media-stage{padding:3%}.storyboard-page figure{transform:rotate(-.45deg);filter:drop-shadow(0 12px 18px #0002)}
+.project-block[data-project="xunshi"] .sheet{background:#f3eadb}.project-block[data-project="xunshi"] .visual-page::before{content:"";position:absolute;inset:5% auto 5% 31%;width:1px;background:#b69a7244}.project-block[data-project="xunshi"] .chapter-copy small{color:#8c672f}.project-block[data-project="xunshi"] .chapter-copy h3{letter-spacing:.12em}.project-block[data-project="xunshi"] .media-stage figure{filter:drop-shadow(0 14px 18px #4a33222d)}
+.project-block[data-project="chadao"] .sheet{background:#fbfaf5}.project-block[data-project="chadao"] .visual-page{grid-template-columns:29% 71%}.project-block[data-project="chadao"] .visual-page:nth-child(even){grid-template-columns:68% 32%}.project-block[data-project="chadao"] .visual-page:nth-child(even) .chapter-copy{order:2;padding-left:5%}.project-block[data-project="chadao"] .visual-page:nth-child(even) .media-stage{order:1;padding-left:7%}.project-block[data-project="chadao"] .visual-page::before{content:"";position:absolute;left:4%;right:4%;top:8%;height:2px;background:#151714}.project-block[data-project="chadao"] .visual-page::after{content:"印";position:absolute;right:4%;bottom:5%;display:grid;place-items:center;width:34px;height:34px;border:1px solid #a23d31;color:#a23d31;font:16px var(--serif)}.project-block[data-project="chadao"] .chapter-copy small{color:#a23d31}.project-block[data-project="chadao"] .media-stage figure{filter:drop-shadow(0 11px 13px #0002)}
+.project-block[data-project="cat-ip"]{background:#151311;padding:34px;border-radius:28px}.project-block[data-project="cat-ip"] .sheet{background:#211c18;color:#fff;border-radius:22px}.project-block[data-project="cat-ip"] .visual-page{grid-template-columns:31% 69%}.project-block[data-project="cat-ip"] .chapter-copy{padding-top:14%}.project-block[data-project="cat-ip"] .chapter-copy h3{font-family:var(--sans);font-weight:900;letter-spacing:-.04em}.project-block[data-project="cat-ip"] .chapter-copy p{color:#d6b997}.project-block[data-project="cat-ip"] .chapter-copy small{color:#66c9f0}.project-block[data-project="cat-ip"] .visual-page::after{content:"●";position:absolute;left:5%;bottom:7%;color:#f08b42;font-size:54px}.project-block[data-project="cat-ip"] .media-stage figure{border:8px solid #f3e4d2;border-radius:13px;box-shadow:0 18px 30px #0007;overflow:hidden}.project-block[data-project="cat-ip"] .media-stage figure:nth-child(odd){transform:translateY(-7%) rotate(-1.4deg)}.project-block[data-project="cat-ip"] .media-stage figure:nth-child(even){transform:translateY(9%) rotate(1.6deg)}
+.project-block[data-project="workflow"] .sheet{background:#0d171b;color:#fff}.project-block[data-project="workflow"] .visual-page{grid-template-columns:27% 73%}.project-block[data-project="workflow"] .chapter-copy{border-top:1px solid #66bfd1;margin:12% 8% 0 14%;padding:8% 0}.project-block[data-project="workflow"] .chapter-copy small{color:#65cce1}.project-block[data-project="workflow"] .chapter-copy h3{font-family:var(--sans);font-size:clamp(28px,3.2vw,48px);font-weight:500}.project-block[data-project="workflow"] .chapter-copy p{color:#aab8bb}.project-block[data-project="workflow"] .media-stage figure{border:1px solid #66bfd1;box-shadow:0 0 0 8px #132328}.project-block[data-project="workflow"] .storyboard-page .media-stage figure{width:92%;transform:rotate(-.5deg)}
+.logo-page .chapter-copy{padding-top:7%}.logo-page .chapter-copy p{font-size:12px}.logo-note{display:block;margin-top:22px;color:#6f5130;font:15px/1.7 var(--serif)}.keywords{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.keywords i{font-style:normal;border:1px solid currentColor;border-radius:99px;padding:6px 10px;font-size:10px}.capabilities{background:#111713;color:#fff;padding:6%}.cap-heading{display:flex;align-items:flex-end;justify-content:space-between}.cap-heading small{color:#c7d938;letter-spacing:.18em}.cap-heading h2{font:clamp(38px,4.6vw,66px)/1.15 var(--serif);margin:0;max-width:70%}.cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ffffff30;margin-top:7%}.cap-grid article{background:#111713;padding:26px}.cap-grid b{color:#c7d938;font:19px var(--serif)}.cap-grid p{font-size:12px;line-height:1.9;color:#c7cec9}.film-strip{position:absolute;left:0;right:0;bottom:0;height:12%;display:flex;overflow:hidden;filter:grayscale(.25)}.film-strip img{height:100%;width:12.5%;object-fit:cover;border-right:3px solid #111}.about{display:grid;grid-template-columns:1.15fr .85fr;padding:8%;background:#f6f3eb}.about small{font-size:10px;letter-spacing:.2em;color:#74812b}.about h2{font:clamp(62px,8vw,118px)/1 var(--serif);margin:18px 0}.about-copy>p{font:20px/1.6 var(--serif)}.about blockquote{margin:10% 0 0;padding-left:24px;border-left:2px solid #94a23d;font:18px/1.9 var(--serif)}.contact-copy{align-self:end;border-top:1px solid #171a18;padding-top:22px}.contact-copy a{display:block;color:#171a18;text-decoration:none;font:clamp(20px,2.2vw,34px)/1.8 var(--serif)}.contact-copy p{margin-top:12%;font-size:13px;line-height:1.8;color:#6b706b}#status{position:fixed;right:30px;bottom:24px;z-index:120;margin:0;padding:13px 18px;background:#c7d938;color:#111;box-shadow:0 9px 30px #0005;opacity:0;transform:translateY(12px);transition:.25s}#status.show{opacity:1;transform:none}@media(max-width:900px){.review-bar{grid-template-columns:1fr auto}.review-bar>a{display:none}.review-bar button{font-size:11px}.sheet{width:95vw}.visual-page{grid-template-columns:32% 68%}.chapter-copy{padding-left:8%}.chapter-copy p{display:none}.project-block[data-project="cat-ip"]{padding:10px}.about blockquote{font-size:13px}}
+.media-stage img{max-height:none}.video-page figure.portrait{height:82%;width:auto!important}.video-page figure.portrait video{height:100%;width:auto}.project-block[data-project="cat-ip"] .visual-page[data-count="1"] .media-stage figure{transform:none}.project-block[data-project="cat-ip"] .visual-page[data-count="1"] .media-stage figure.portrait{height:78%}
+.project-block[data-project="cat-ip"] .video-page figure.portrait{height:72%}
+.visual-page{height:min(810px,53.4375vw);aspect-ratio:auto;min-height:0}.visual-page .media-stage{height:100%;min-height:0;overflow:hidden}
+.visual-page{display:block}.visual-page .chapter-copy{position:absolute;left:5%;right:5%;top:4%;padding:0;max-width:62%;z-index:8}.visual-page .chapter-copy h3{font-size:clamp(27px,3.3vw,48px);margin:7px 0}.visual-page .chapter-copy p{max-width:46em;margin:0;font-size:11px;line-height:1.6}.visual-page .media-stage,.project-block[data-project="chadao"] .visual-page:nth-child(even) .media-stage{position:absolute;left:4%!important;right:4%!important;top:17%!important;bottom:4%!important;width:auto!important;height:auto!important;padding:0!important;order:initial}.visual-page[data-count="2"] .media-stage{justify-content:space-around;gap:6%}.visual-page[data-count="2"] .media-stage figure.portrait{height:93%}.visual-page[data-count="2"] .media-stage figure:first-child{transform:translateY(-3%)}.visual-page[data-count="2"] .media-stage figure:last-child{transform:translateY(5%)}.visual-page[data-count="1"] .media-stage figure.portrait{height:96%}.visual-page[data-count="1"] .media-stage figure.landscape{width:min(94%,1100px)}.visual-page[data-count="3"] .media-stage{justify-content:space-around}.visual-page[data-count="3"] .media-stage figure{width:31%;transform:none!important}.visual-page::before{display:none!important}.project-block[data-project="chadao"] .visual-page:nth-child(even){display:block}.project-block[data-project="chadao"] .visual-page:nth-child(even) .chapter-copy{position:absolute;left:auto;right:5%;top:4%;padding:0;text-align:right;max-width:62%}.project-block[data-project="chadao"] .visual-page::after{bottom:3%}.project-block[data-project="cat-ip"] .chapter-copy{padding:0}.project-block[data-project="cat-ip"] .visual-page::after{left:auto;right:4%;bottom:3%;font-size:34px}.project-block[data-project="workflow"] .chapter-copy{position:absolute;left:5%;right:auto;top:4%;margin:0;padding:7px 0 0;width:42%;border-top:1px solid #66bfd1}.project-block[data-project="workflow"] .media-stage,.project-block[data-project="workflow"] .visual-page:nth-child(even) .media-stage{top:19%!important}.project-marker{position:absolute;right:4%;top:4%;z-index:12;display:grid;text-align:right}.project-marker small{font-size:9px;letter-spacing:.15em;opacity:.65}.project-marker b{font:22px var(--serif)}.project-block[data-project="chadao"] .project-marker{left:4%;right:auto;text-align:left}.project-block[data-project="cat-ip"] .project-marker,.project-block[data-project="workflow"] .project-marker{color:#fff}.logo-page .chapter-copy{padding:0}.logo-note{position:absolute;left:0;top:78px}.keywords{position:absolute;left:0;top:112px}.portfolio-cover>img{object-fit:contain;background:#171a16}.project-opener{display:none}
+.about{display:grid;grid-template-columns:36% 64%;gap:5%;padding:5%;background:#0e1413;color:#fff}.about-portrait{margin:0;width:100%;height:100%;overflow:hidden;border-radius:28px}.about-portrait img{width:100%;height:100%;object-fit:cover}.about-copy{align-self:center;padding-right:5%}.about-copy small{color:#c7d938}.about-copy h2{font-size:clamp(38px,5vw,72px);margin:8px 0 14px}.about-copy h3{font:clamp(22px,2.6vw,38px)/1.45 var(--serif);margin:0 0 18px}.about-copy>p{font:13px/1.8 var(--sans);color:#aeb8b4;max-width:54em}.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 36px;margin-top:6%}.about-facts span{display:grid;border-top:1px solid #44504c;padding-top:10px;font:14px/1.6 var(--serif)}.about-facts i{font:10px var(--sans);color:#9ba69f;margin-bottom:6px}.contact{background:#0b100e;color:#fff}.contact::before{content:"";position:absolute;width:62%;aspect-ratio:1;border-radius:50%;right:-18%;top:-54%;background:#152712}.contact-heading{position:absolute;left:7%;top:9%;z-index:2}.contact-heading small{color:#c7d938;font-size:10px;letter-spacing:.18em}.contact-heading h2{font:clamp(30px,4vw,58px)/1.35 var(--serif);margin:16px 0}.contact-card{position:absolute;left:7%;bottom:9%;width:55%;padding:3.5%;border:1px solid #52605a;border-radius:26px;background:#121a18}.contact-card>small{color:#c7d938;letter-spacing:.18em}.contact-card>div{display:grid;border-bottom:1px solid #3d4945;padding:14px 0 10px}.contact-card i{font:9px var(--sans);color:#8f9a95}.contact-card a{color:#fff;text-decoration:none;font:clamp(18px,2.1vw,31px)/1.4 var(--serif)}.contact-card p{margin:16px 0 0;color:#8f9a95;font-size:10px}.contact-qr{position:absolute;right:9%;bottom:12%;z-index:3;margin:0;width:26%;text-align:center}.contact-qr img{display:block;width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 47%;border:12px solid white;border-radius:22px}.contact-qr figcaption{margin-top:10px;color:#aab2ae;font-size:11px}.capabilities{display:none}
+.qr-crop{position:relative;width:100%;aspect-ratio:1;overflow:hidden;background:#fff;border:12px solid white;border-radius:22px}.contact-qr .qr-crop img{position:absolute;display:block;width:188.62%;max-width:none;height:auto;left:-46.15%;top:-50.77%;border:0;border-radius:0}.contact-qr figcaption{margin-top:10px;color:#aab2ae;font-size:11px}
+.visual-page .media-stage,.project-block[data-project="chadao"] .visual-page:nth-child(even) .media-stage{top:23%!important;bottom:4%!important;overflow:hidden}.visual-page .media-stage figure{aspect-ratio:var(--ratio);max-height:100%}.visual-page .media-stage figure img{width:100%;height:100%;max-height:none;object-fit:contain}.visual-page[data-count="1"] .media-stage figure.square{height:94%;width:auto}.visual-page[data-count="2"] .media-stage figure.square{height:86%;width:auto}.visual-page[data-count="3"] .media-stage figure{width:30%;height:auto}.storyboard-page .media-stage,.video-page .media-stage,.project-block[data-project="workflow"] .storyboard-page .media-stage,.project-block[data-project="workflow"] .video-page .media-stage{top:21%!important}.logo-page .chapter-copy{left:5%;right:auto;top:9%;max-width:40%}.logo-page .chapter-copy h3{font-size:clamp(30px,3.6vw,52px)}.logo-page .chapter-copy p{font-size:11px;line-height:1.65}.logo-page .media-stage{left:48%!important;right:4%!important;top:7%!important;bottom:7%!important}.logo-page .media-stage figure.square{height:88%}.logo-note{position:static;margin-top:14px}.keywords{position:static;margin-top:12px}.about-facts span{padding-top:14px}.project-block[data-project="chadao"] .visual-page[data-count="2"] .media-stage{justify-content:space-around}.project-block[data-project="chadao"] .visual-page[data-count="2"] .media-stage figure.portrait{height:91%}
+.logo-page .media-stage{left:54%!important}.project-block[data-project="chadao"] .project-marker{left:auto;right:4%;text-align:right}.project-block[data-project="workflow"] .visual-page .media-stage{top:28%!important}.project-block[data-project="workflow"] .storyboard-page .media-stage{top:27%!important}.project-block[data-project="workflow"] .chapter-copy{width:55%;max-width:55%}
+.project-block[data-project="xunshi"] .project-marker{left:5%;right:auto;top:auto;bottom:3%;text-align:left}.project-block[data-project="workflow"] .visual-page .media-stage,.project-block[data-project="workflow"] .storyboard-page .media-stage{top:32%!important}
+.video-page .media-stage figure,.storyboard-page .media-stage figure{width:100%!important;height:100%!important;aspect-ratio:auto;max-height:100%;transform:none!important}.video-page .media-stage video,.storyboard-page .media-stage img{width:100%;height:100%;object-fit:contain}.contact-heading{max-width:62%}.contact-qr{bottom:8%}
+.project-block[data-project="workflow"] .visual-page .media-stage,.project-block[data-project="workflow"] .storyboard-page .media-stage{top:36%!important}.contact-heading{max-width:80%}.contact-heading h2{font-size:clamp(26px,3vw,44px);line-height:1.3}
+.project-block[data-project="workflow"] .visual-page:nth-child(even) .media-stage,.project-block[data-project="workflow"] .visual-page:nth-child(odd) .media-stage{top:36%!important}
+/* 编辑式拼贴：图片保持完整，但不再排队。 */
+.visual-page[data-count="2"] .media-stage,.visual-page[data-count="3"] .media-stage{display:block;top:14%!important;bottom:3%!important;overflow:hidden}.visual-page[data-count="2"] .media-stage figure,.visual-page[data-count="3"] .media-stage figure{position:absolute;margin:0;display:flex;align-items:center;justify-content:center;transform:none!important}.visual-page[data-count="2"] .media-stage figure img,.visual-page[data-count="3"] .media-stage figure img{width:100%;height:100%;object-fit:contain}
+.visual-page[data-count="2"].composition-0 .media-stage figure:first-child{left:3%;top:2%;width:49%;height:67%}.visual-page[data-count="2"].composition-0 .media-stage figure:last-child{right:3%;bottom:0;width:43%;height:72%}.visual-page[data-count="2"].composition-1 .media-stage figure:first-child{left:5%;bottom:0;width:41%;height:75%}.visual-page[data-count="2"].composition-1 .media-stage figure:last-child{right:2%;top:0;width:51%;height:66%}.visual-page[data-count="2"].composition-2 .media-stage figure:first-child{left:8%;top:0;width:36%;height:86%}.visual-page[data-count="2"].composition-2 .media-stage figure:last-child{right:7%;bottom:0;width:39%;height:78%}
+.visual-page[data-count="2"] .media-stage figure.portrait{width:34%!important;height:88%!important}.visual-page[data-count="2"].composition-0 .media-stage figure.portrait:first-child{left:12%;top:0}.visual-page[data-count="2"].composition-0 .media-stage figure.portrait:last-child{right:8%;top:auto;bottom:0;height:78%!important}.visual-page[data-count="2"].composition-1 .media-stage figure.portrait:first-child{left:7%;top:auto;bottom:0;height:79%!important}.visual-page[data-count="2"].composition-1 .media-stage figure.portrait:last-child{right:13%;top:0;height:89%!important}.visual-page[data-count="2"].composition-2 .media-stage figure.portrait:first-child{left:15%;top:0;height:88%!important}.visual-page[data-count="2"].composition-2 .media-stage figure.portrait:last-child{right:12%;top:auto;bottom:0;height:80%!important}
+.visual-page[data-count="3"].composition-0 .media-stage figure:nth-child(1){left:1%;top:20%;width:36%;height:65%}.visual-page[data-count="3"].composition-0 .media-stage figure:nth-child(2){left:34%;top:0;width:36%;height:62%}.visual-page[data-count="3"].composition-0 .media-stage figure:nth-child(3){right:0;bottom:0;width:34%;height:62%}.visual-page[data-count="3"].composition-1 .media-stage figure:nth-child(1){left:0;top:0;width:47%;height:72%}.visual-page[data-count="3"].composition-1 .media-stage figure:nth-child(2){right:3%;top:4%;width:43%;height:42%}.visual-page[data-count="3"].composition-1 .media-stage figure:nth-child(3){right:0;bottom:0;width:49%;height:47%}.visual-page[data-count="3"].composition-2 .media-stage figure:nth-child(1){left:4%;bottom:0;width:40%;height:62%}.visual-page[data-count="3"].composition-2 .media-stage figure:nth-child(2){left:31%;top:0;width:38%;height:58%}.visual-page[data-count="3"].composition-2 .media-stage figure:nth-child(3){right:1%;bottom:7%;width:32%;height:59%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"]::after{display:block!important;content:"春　夏　秋　冬";position:absolute;left:5%;right:5%;bottom:1.5%;font:clamp(16px,2vw,29px) var(--serif);letter-spacing:.32em;color:#8d6834;opacity:.36;text-align:center;z-index:1}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"] .chapter-copy{top:3%;left:4%;max-width:44%}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"] .chapter-copy h3{font-size:clamp(36px,4.8vw,68px);letter-spacing:.16em}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"] .media-stage{top:16%!important;bottom:6%!important}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"]::after{display:block!important;content:"栀";position:absolute;left:42%;top:12%;font:clamp(150px,24vw,330px)/1 var(--serif);color:#8f754b;opacity:.065;z-index:0}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="2"] .chapter-copy{left:2%;right:auto;top:18%;max-width:10%;writing-mode:vertical-rl}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="2"] .chapter-copy small{letter-spacing:.12em}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="2"] .chapter-copy h3{font-size:clamp(32px,4.4vw,62px);margin:8px 0}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="2"] .chapter-copy p{display:none}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="2"] .media-stage{left:8%!important;top:7%!important;bottom:4%!important}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="2"] .media-stage figure:first-child{left:7%;top:0;height:91%!important}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="2"] .media-stage figure:last-child{right:6%;bottom:0;height:79%!important}
+.project-block[data-project="chadao"] .visual-page[data-count="2"] .media-stage,.project-block[data-project="chadao"] .visual-page[data-count="3"] .media-stage{top:15%!important}.project-block[data-project="chadao"] .visual-page[data-count="2"] .chapter-copy,.project-block[data-project="chadao"] .visual-page[data-count="3"] .chapter-copy{top:3%;max-width:44%}.project-block[data-project="cat-ip"] .visual-page[data-count="2"] .media-stage,.project-block[data-project="cat-ip"] .visual-page[data-count="3"] .media-stage{top:13%!important}.project-block[data-project="cat-ip"] .visual-page[data-count="2"] .media-stage figure,.project-block[data-project="cat-ip"] .visual-page[data-count="3"] .media-stage figure{border-color:#f3e4d2}.project-block[data-project="workflow"] .visual-page[data-count="2"] .media-stage,.project-block[data-project="workflow"] .visual-page[data-count="3"] .media-stage{top:24%!important}
+.visual-page[data-count="1"] .media-stage{top:25%!important}.visual-page[data-count="2"] .media-stage,.visual-page[data-count="3"] .media-stage,.project-block[data-project="chadao"] .visual-page[data-count="2"] .media-stage,.project-block[data-project="chadao"] .visual-page[data-count="3"] .media-stage,.project-block[data-project="cat-ip"] .visual-page[data-count="2"] .media-stage,.project-block[data-project="cat-ip"] .visual-page[data-count="3"] .media-stage{top:22%!important}.logo-page .media-stage{top:7%!important}
+.visual-page[data-count="3"].composition-0 .media-stage figure:nth-child(1){left:0;top:27%;width:31%;height:67%}.visual-page[data-count="3"].composition-0 .media-stage figure:nth-child(2){left:34.5%;top:0;width:31%;height:64%}.visual-page[data-count="3"].composition-0 .media-stage figure:nth-child(3){right:0;bottom:0;width:31%;height:64%}.visual-page[data-count="3"].composition-2 .media-stage figure:nth-child(1){left:0;bottom:0;width:31%;height:64%}.visual-page[data-count="3"].composition-2 .media-stage figure:nth-child(2){left:34.5%;top:0;width:31%;height:64%}.visual-page[data-count="3"].composition-2 .media-stage figure:nth-child(3){right:0;bottom:7%;width:31%;height:64%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"] .media-stage{top:24%!important;bottom:6%!important}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"][data-count="3"] .media-stage figure:nth-child(1){left:0;top:22%;width:31%;height:65%}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"][data-count="3"] .media-stage figure:nth-child(2){left:34.5%;top:0;width:31%;height:63%}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"][data-count="3"] .media-stage figure:nth-child(3){right:0;bottom:0;width:31%;height:63%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="2"] .media-stage{left:8%!important;top:7%!important;bottom:4%!important}.project-block[data-project="workflow"] .visual-page[data-count="2"] .media-stage,.project-block[data-project="workflow"] .visual-page[data-count="3"] .media-stage{top:28%!important}
+.concept-page{padding:6%;overflow:hidden}.concept-page::before{content:"";position:absolute;inset:0;opacity:.14}.concept-index{position:absolute;left:6%;top:7%;display:grid;z-index:2}.concept-index small{font-size:10px;letter-spacing:.2em}.concept-index b{font:clamp(26px,3.5vw,50px) var(--serif);margin-top:7px}.concept-main{position:absolute;left:25%;right:8%;top:22%;z-index:2}.concept-main h2{font:clamp(42px,6vw,86px)/1.15 var(--serif);margin:0;max-width:11em}.concept-main p{margin:4% 0 0 18%;max-width:48em;font-size:15px;line-height:2}.concept-proof{position:absolute;left:6%;right:6%;bottom:7%;z-index:2;border-top:1px solid currentColor;padding-top:14px;font-size:12px;letter-spacing:.12em}.project-block[data-project="xunshi"] .concept-page{background:#2b241c;color:#f3eadb}.project-block[data-project="xunshi"] .concept-page::before{background:radial-gradient(circle at 78% 22%,#d8b570,transparent 34%)}.project-block[data-project="chadao"] .concept-page{background:#f7f4eb;color:#1d2520}.project-block[data-project="chadao"] .concept-page::before{background:linear-gradient(135deg,transparent 35%,#64836b 36% 37%,transparent 38%)}.project-block[data-project="chadao"] .concept-main h2{letter-spacing:.09em}.project-block[data-project="cat-ip"] .concept-page{background:#1d1916;color:#f6e8d6;border-radius:22px}.project-block[data-project="cat-ip"] .concept-page::before{background:radial-gradient(circle at 82% 26%,#f08b42 0 9%,transparent 10%),radial-gradient(circle at 70% 55%,#65c8ef 0 5%,transparent 6%)}.project-block[data-project="cat-ip"] .concept-main h2{font-family:var(--sans);font-weight:900;transform:rotate(-1.2deg)}.project-block[data-project="workflow"] .concept-page{background:#0c171b;color:#eef7f8}.project-block[data-project="workflow"] .concept-page::before{background:repeating-linear-gradient(90deg,transparent 0 8%,#68c9dc 8.1% 8.2%)}.project-block[data-project="workflow"] .concept-main h2{font-family:var(--sans);font-weight:500}.project-block[data-project="workflow"] .concept-proof{color:#69c9db}
+.visual-page[data-has-copy="true"] .chapter-copy{top:3%;max-width:72%}.visual-page[data-has-copy="true"] .chapter-copy p{display:block;font-size:12px;line-height:1.65;color:inherit;opacity:.72;max-width:54em;margin:4px 0 0}.visual-page[data-has-copy="true"] .media-stage{top:30%!important}.visual-page[data-has-copy="true"].storyboard-page .media-stage{top:32%!important}.visual-page[data-has-copy="true"].video-page .media-stage{top:35%!important}.project-block[data-project="workflow"] .visual-page[data-has-copy="true"] .media-stage,.project-block[data-project="workflow"] .visual-page[data-has-copy="true"]:nth-child(even) .media-stage{top:38%!important}.project-block[data-project="workflow"] .visual-page[data-has-copy="true"] .chapter-copy{width:76%;max-width:76%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .chapter-copy{left:4%;right:4%;top:3%;max-width:70%;writing-mode:horizontal-tb}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .chapter-copy h3{font-size:clamp(36px,4.8vw,68px);margin:4px 0}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage{left:4%!important;top:29%!important;bottom:3%!important}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure:nth-child(1){left:0;top:0;width:30%;height:82%}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure:nth-child(2){left:35%;bottom:0;width:30%;height:82%}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure:nth-child(3){right:0;top:4%;width:30%;height:82%}
+.project-block[data-project="chadao"] .composition-0 .chapter-copy h3{font-size:clamp(38px,5vw,70px);letter-spacing:.12em}.project-block[data-project="chadao"] .composition-1 .chapter-copy{left:auto;right:4%;text-align:right}.project-block[data-project="chadao"] .composition-1 .chapter-copy h3{font-size:clamp(30px,4vw,58px);font-style:italic}.project-block[data-project="chadao"] .composition-2 .chapter-copy h3{font-size:clamp(42px,5.4vw,76px);letter-spacing:.2em}.project-block[data-project="xunshi"] .composition-1 .chapter-copy h3{font-style:italic;font-weight:400}.project-block[data-project="cat-ip"] .chapter-copy h3{transform:rotate(-.8deg);transform-origin:left;font-size:clamp(34px,4.6vw,66px)}.project-block[data-project="workflow"] .chapter-copy h3{letter-spacing:.06em}.project-block[data-project="workflow"] .chapter-copy small::before{content:"● ";color:#69c9db}
+.capabilities{display:block;background:#111713;color:#fff;padding:6%}.cap-heading{display:flex;align-items:flex-end;justify-content:space-between}.cap-heading small{color:#c7d938;letter-spacing:.18em}.cap-heading h2{font:clamp(36px,4.6vw,66px)/1.15 var(--serif);margin:0;max-width:72%}.cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ffffff30;margin-top:7%}.cap-grid article{background:#111713;padding:24px}.cap-grid b{color:#c7d938;font:19px var(--serif)}.cap-grid p{font-size:12px;line-height:1.9;color:#c7cec9}.cap-ending{position:absolute;left:6%;right:6%;bottom:6%;padding-top:12px;border-top:1px solid #ffffff44;color:#9da7a0;font-size:11px;letter-spacing:.18em}
+.logo-page .media-stage{left:62%!important}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"][data-count="3"] .media-stage{top:32%!important}.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"][data-count="1"] .media-stage{top:42%!important}.project-block[data-project="chadao"] .visual-page[data-chapter="t-cat"][data-has-copy="true"] .media-stage{top:33%!important}
+
+/* 影像页：标题保持单行，缩短标题区与播放器之间的空档，并把高度还给视频。 */
+.visual-page.video-page[data-has-copy="true"] .chapter-copy,
+.project-block[data-project="xunshi"] .visual-page.video-page[data-chapter="x-seasons"] .chapter-copy,
+.project-block[data-project="workflow"] .visual-page.video-page[data-has-copy="true"] .chapter-copy{
+  left:4%;
+  right:4%;
+  top:3%;
+  width:auto;
+  max-width:92%!important;
+}
+.visual-page.video-page .chapter-copy h3,
+.project-block[data-project="xunshi"] .visual-page.video-page[data-chapter="x-seasons"] .chapter-copy h3,
+.project-block[data-project="workflow"] .visual-page.video-page .chapter-copy h3{
+  margin:4px 0 3px;
+  font-size:clamp(25px,3vw,43px)!important;
+  line-height:1.08;
+  letter-spacing:.08em;
+  white-space:nowrap;
+}
+.visual-page.video-page[data-has-copy="true"] .media-stage,
+.project-block[data-project="xunshi"] .visual-page.video-page[data-chapter="x-seasons"] .media-stage,
+.project-block[data-project="workflow"] .visual-page.video-page[data-has-copy="true"] .media-stage,
+.project-block[data-project="workflow"] .visual-page.video-page[data-has-copy="true"]:nth-child(even) .media-stage{
+  top:22%!important;
+  bottom:3%!important;
+}
+.visual-page.video-page .media-stage figure{
+  width:100%!important;
+  height:100%!important;
+  max-height:none;
+  aspect-ratio:auto;
+}
+.visual-page.video-page .media-stage video{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+/* 故事板页与影像页使用同一套紧凑标题区，避免长标题断行并放大故事板。 */
+.visual-page.storyboard-page[data-has-copy="true"] .chapter-copy,
+.project-block[data-project="xunshi"] .visual-page.storyboard-page[data-chapter="x-seasons"] .chapter-copy,
+.project-block[data-project="workflow"] .visual-page.storyboard-page[data-has-copy="true"] .chapter-copy{
+  left:4%;
+  right:4%;
+  top:3%;
+  width:auto;
+  max-width:92%!important;
+}
+.visual-page.storyboard-page .chapter-copy h3,
+.project-block[data-project="xunshi"] .visual-page.storyboard-page[data-chapter="x-seasons"] .chapter-copy h3,
+.project-block[data-project="workflow"] .visual-page.storyboard-page .chapter-copy h3{
+  margin:4px 0 3px;
+  font-size:clamp(24px,2.8vw,40px)!important;
+  line-height:1.08;
+  letter-spacing:.07em;
+  white-space:nowrap;
+}
+.visual-page.storyboard-page[data-has-copy="true"] .media-stage,
+.project-block[data-project="xunshi"] .visual-page.storyboard-page[data-chapter="x-seasons"] .media-stage{
+  top:18%!important;
+  bottom:3%!important;
+}
+.project-block[data-project="workflow"] .visual-page.storyboard-page[data-has-copy="true"] .media-stage,
+.project-block[data-project="workflow"] .visual-page.storyboard-page[data-has-copy="true"]:nth-child(even) .media-stage{
+  top:22%!important;
+  bottom:3%!important;
+}
+
+/* 循时：把参考稿中的宣纸、墨迹、竹影与金印推广为完整的品牌视觉语法。 */
+.project-block[data-project="xunshi"] .visual-page{
+  isolation:isolate;
+  background-color:#f2eadb;
+  background-image:url("media/assets/song-paper.svg");
+  background-size:cover;
+  background-position:center;
+}
+.project-block[data-project="xunshi"] .visual-page::before{
+  content:"";
+  display:block!important;
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 7% 78%,rgba(31,40,33,.17),transparent 26%),
+    radial-gradient(ellipse at 91% 10%,rgba(155,120,58,.12),transparent 24%);
+}
+.project-block[data-project="xunshi"] .visual-page .chapter-copy,
+.project-block[data-project="xunshi"] .visual-page .media-stage,
+.project-block[data-project="xunshi"] .visual-page .project-marker{z-index:2}
+.project-block[data-project="xunshi"] .visual-page .chapter-copy h3{
+  color:#282116;
+  text-shadow:0 1px 0 #fff8;
+}
+.project-block[data-project="xunshi"] .visual-page .chapter-copy small{color:#9b7437;font-weight:700}
+.project-block[data-project="xunshi"] .visual-page .media-stage figure{
+  filter:drop-shadow(0 17px 20px rgba(58,42,21,.2));
+}
+
+/* 黑金设计理念：用真实金色方印作为中心锚点。 */
+.project-block[data-project="xunshi"] .concept-page{
+  background:
+    radial-gradient(circle at 82% 12%,rgba(190,151,77,.16),transparent 27%),
+    linear-gradient(135deg,#080a09,#141411 58%,#080908);
+  color:#d9bd86;
+  border:1px solid #b8934e55;
+}
+.project-block[data-project="xunshi"] .concept-page::before{
+  opacity:.34;
+  background:
+    url("media/assets/song-paper.svg") center/cover,
+    radial-gradient(circle at 50% 50%,#3f3523,transparent 55%);
+  mix-blend-mode:screen;
+  filter:grayscale(1) brightness(.42) sepia(.35);
+}
+.project-block[data-project="xunshi"] .concept-index{left:5%;top:7%}
+.project-block[data-project="xunshi"] .concept-index small{color:#a47c3b}
+.project-block[data-project="xunshi"] .concept-index b{font-size:clamp(22px,2.5vw,36px);letter-spacing:.12em}
+.project-block[data-project="xunshi"] .concept-main{left:10%;right:8%;top:24%}
+.project-block[data-project="xunshi"] .concept-main h2{
+  max-width:none;
+  margin:0;
+  color:#e2c99a;
+  font-size:clamp(36px,5vw,72px);
+  line-height:1.12;
+  letter-spacing:.08em;
+  white-space:nowrap;
+}
+.project-block[data-project="xunshi"] .concept-main p{
+  max-width:64em;
+  margin:4% 0 0 0;
+  color:#d7c6a6;
+  font:clamp(12px,1.25vw,17px)/1.95 var(--serif);
+}
+.project-block[data-project="xunshi"] .concept-proof{
+  left:4%;right:4%;bottom:5%;
+  border-color:#c7a86c88;
+  color:#c6ab79;
+}
+.concept-seal{
+  position:absolute;
+  left:50%;
+  top:58%;
+  width:10.5%;
+  aspect-ratio:1;
+  margin:0;
+  transform:translateX(-50%) rotate(-1deg);
+  overflow:hidden;
+  border-radius:13%;
+  box-shadow:0 14px 34px #0009,0 0 28px #c9953744;
+  z-index:3;
+}
+.concept-seal img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* 标志起源：左文右印，宣纸与竹影不再只是空白底。 */
+.project-block[data-project="xunshi"] .logo-page .chapter-copy{
+  left:5%;top:8%;width:46%;max-width:46%!important;
+}
+.project-block[data-project="xunshi"] .logo-page .chapter-copy h3{
+  font-size:clamp(35px,4.4vw,62px)!important;
+  letter-spacing:.15em;
+}
+.project-block[data-project="xunshi"] .logo-page .chapter-copy p{max-width:42em;font:13px/1.9 var(--serif)}
+.project-block[data-project="xunshi"] .logo-page .logo-note{color:#7b5523;font-size:17px}
+.project-block[data-project="xunshi"] .logo-page .keywords i{
+  border:0;
+  border-bottom:1px solid #b78a43;
+  border-radius:0;
+  padding:7px 15px 6px;
+  background:linear-gradient(90deg,#b98a34,#e6cf95);
+  color:#302617;
+  box-shadow:0 5px 13px #6a4b1b22;
+}
+.project-block[data-project="xunshi"] .logo-page .media-stage{
+  left:57%!important;right:7%!important;top:8%!important;bottom:8%!important;
+  border-radius:48% 48% 46% 46%;
+  background:radial-gradient(circle,#fffdf7 0 48%,rgba(185,151,88,.16) 49% 50%,transparent 51%);
+}
+.project-block[data-project="xunshi"] .logo-page .media-stage figure.square{height:78%}
+.project-block[data-project="xunshi"] .logo-page .media-stage img{border-radius:8%;mix-blend-mode:multiply}
+
+/* 香水瓶设计：技术拆解与主瓶形成一轻一重的展示关系。 */
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"]::after{
+  content:"";
+  display:block!important;
+  position:absolute;
+  left:-10%;top:24%;width:37%;aspect-ratio:1;border-radius:50%;
+  background:repeating-radial-gradient(circle at 42% 45%,#8aa09333 0 2px,#f0eadf55 3px 9px);
+  box-shadow:inset 0 0 45px #6e806655;
+  z-index:0;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"] .chapter-copy{left:4%;top:3%;max-width:74%!important}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"] .media-stage{top:23%!important;left:5%!important;right:5%!important}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"] .media-stage figure:first-child{left:9%;top:13%;width:34%!important;height:78%!important}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"] .media-stage figure:last-child{right:8%;top:0;width:40%!important;height:94%!important}
+
+/* 四季与栀露：保留原图完整比例，用高低错落和背景大字建立层次。 */
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"][data-kind="visual"] .chapter-copy{max-width:73%!important}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"][data-kind="visual"] .media-stage{top:25%!important;bottom:7%!important}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-seasons"][data-kind="visual"] .media-stage::before{
+  content:"香气流";
+  position:absolute;left:34%;top:25%;z-index:-1;
+  color:#80683d0f;font:clamp(90px,14vw,200px)/1 var(--serif);letter-spacing:.12em;white-space:nowrap;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage{
+  top:24%!important;bottom:3%!important;
+  border-radius:28px;
+  background:linear-gradient(90deg,transparent,rgba(255,253,247,.52) 45%,transparent);
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure:nth-child(1){left:1%;top:9%;width:29%;height:85%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure:nth-child(2){left:35.5%;bottom:0;width:29%;height:91%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure:nth-child(3){right:1%;top:7%;width:29%;height:85%}
+
+/* 茶道周边：把商品放进同一个水墨展示台，而不是两张图机械并列。 */
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-product"]{
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at 72% 72%,#66806a1c,transparent 34%),
+    url("media/assets/song-paper.svg") center/cover;
+}
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-product"]::after{
+  content:"茶道";
+  display:block!important;
+  position:absolute;left:38%;top:22%;z-index:0;
+  color:#283c2d0c;font:clamp(120px,19vw,270px)/1 var(--serif);letter-spacing:.04em;
+}
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-product"] .chapter-copy,
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-product"] .media-stage{z-index:2}
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-product"] .chapter-copy{top:4%;max-width:67%!important;text-align:left}
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-product"] .chapter-copy h3{font-size:clamp(28px,3.8vw,54px);letter-spacing:.12em}
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-product"][data-count="2"] .media-stage{top:20%!important;bottom:4%!important}
+
+/* 小尺寸预览下仍保持正文与主画面之间的安全距离。 */
+.project-block[data-project="xunshi"] .visual-page.storyboard-page[data-has-copy="true"] .media-stage{top:21%!important}
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-logo"] .media-stage{top:31%!important}
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-product"][data-count="2"] .media-stage{top:26%!important}
+.project-block[data-project="chadao"] .visual-page[data-chapter="t-ad"] .media-stage{top:31%!important}
+
+/* 依照参考稿重构：五张瓶型素材只占一页，形成“拆解—细节—主瓶”的阅读路径。 */
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"]{
+  border-radius:0 0 34px 34px;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .chapter-copy{
+  left:3%;right:3%;top:2.5%;max-width:94%!important;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .chapter-copy h3{
+  margin:0 0 2px;
+  font-size:clamp(28px,3.7vw,53px)!important;
+  letter-spacing:.1em;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .chapter-copy p{
+  max-width:80em;
+  font-size:10px;
+  line-height:1.55;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage{
+  display:block;
+  left:3%!important;right:3%!important;top:22%!important;bottom:3%!important;
+  overflow:hidden;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure{
+  position:absolute;
+  display:flex;
+  margin:0;
+  align-items:center;
+  justify-content:center;
+  transform:none!important;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage img{
+  width:100%;height:100%;object-fit:contain;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure:nth-child(1){left:0;top:5%;width:27%;height:82%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure:nth-child(2){right:4%;top:0;width:29%;height:96%;z-index:3}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure:nth-child(3),
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure:nth-child(4){
+  left:37%;width:16%;height:29%;border-radius:50%;overflow:hidden;
+  border:6px solid rgba(250,247,237,.9);box-shadow:0 9px 24px #73552635;z-index:4;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure:nth-child(3){top:10%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure:nth-child(4){top:45%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure:nth-child(3) img,
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure:nth-child(4) img{object-fit:cover}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-bottle"][data-count="5"] .media-stage figure:nth-child(5){
+  left:34%!important;right:auto!important;top:auto!important;bottom:0!important;
+  width:30%!important;height:24%!important;z-index:2;
+}
+
+/* 栀露三联页：中心主视觉更大，左右辅图后退，墨线贯穿而不遮图。 */
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"]{
+  border-radius:0 0 34px 34px;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .chapter-copy{
+  left:20%;right:20%;top:2%;max-width:none!important;text-align:center;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .chapter-copy small{letter-spacing:.32em}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .chapter-copy h3{
+  margin:0;
+  font-size:clamp(31px,4.2vw,60px)!important;
+  letter-spacing:.13em;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .chapter-copy p{
+  max-width:58em;margin:3px auto 0;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage{
+  top:22%!important;bottom:3%!important;
+  background:
+    linear-gradient(8deg,transparent 43%,rgba(42,48,39,.22) 43.3% 43.6%,transparent 43.9%),
+    radial-gradient(ellipse at 50% 56%,rgba(255,253,247,.78),transparent 52%);
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage::before{
+  content:"栀花";
+  position:absolute;left:35%;top:22%;z-index:0;
+  color:#8d754817;font:clamp(100px,16vw,225px)/1 var(--serif);letter-spacing:.05em;
+}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure{z-index:2}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure:nth-child(1){left:2%;top:12%;width:27%;height:78%}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure:nth-child(2){left:35%;top:0;width:30%;height:96%;z-index:3}
+.project-block[data-project="xunshi"] .visual-page[data-chapter="x-zhilu"][data-count="3"] .media-stage figure:nth-child(3){right:2%;top:10%;width:27%;height:80%}
+
+/* 用户确认的完成版式直接作为整页使用；不再叠加模板标题、背景字或装饰。 */
+.direct-art-page,
+.project-block[data-project="xunshi"] .direct-art-page{
+  display:block;
+  padding:0;
+  background:#f3eadb;
+  border:0;
+  border-radius:0;
+}
+.xunshi-concept-art,
+.project-block[data-project="xunshi"] .xunshi-concept-art{background:#080909}
+.direct-art-page::before,
+.direct-art-page::after,
+.project-block[data-project="xunshi"] .direct-art-page::before,
+.project-block[data-project="xunshi"] .direct-art-page::after{display:none!important;content:none!important}
+.direct-artwork{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+
+/* 循时的其余故事板沿用完成稿的画框语言，不再裸放一张九宫格。 */
+.project-block[data-project="xunshi"] .storyboard-page:not(.direct-art-page){
+  border:1px solid #b28c4d;
+  box-shadow:inset 0 0 0 10px #f7f0e3,inset 0 0 0 11px #b28c4d66,0 18px 55px #2224;
+}
+.project-block[data-project="xunshi"] .storyboard-page:not(.direct-art-page) .chapter-copy{
+  left:8%;right:8%;top:3%;max-width:84%!important;text-align:center;
+}
+.project-block[data-project="xunshi"] .storyboard-page:not(.direct-art-page) .chapter-copy h3{
+  color:#8f6c34;
+  letter-spacing:.12em;
+}
+.project-block[data-project="xunshi"] .storyboard-page:not(.direct-art-page) .chapter-copy p{margin-left:auto;margin-right:auto}
+.project-block[data-project="xunshi"] .storyboard-page:not(.direct-art-page) .media-stage{left:8%!important;right:8%!important;top:22%!important;bottom:7%!important}
+.project-block[data-project="xunshi"] .storyboard-page:not(.direct-art-page) .media-stage figure{
+  border:7px solid #f8f2e8;
+  outline:1px solid #b28c4d;
+  border-radius:13px;
+  box-shadow:0 9px 18px #5b452633;
+  overflow:hidden;
+}
+
+
+/* Standalone export and PDF pagination */
+body{background:#d8d5cd}
+.video-cta{position:absolute;z-index:30;top:4.5%;right:4%;display:inline-flex;align-items:center;justify-content:center;min-width:9.5em;padding:.72em 1.35em;border:1px solid #b58a4a;border-radius:999px;background:#f7f0e2e8;color:#6c4a22;text-decoration:none;font-size:clamp(12px,1.15vw,17px);font-weight:700;letter-spacing:.08em;box-shadow:0 7px 22px #5d401c26;backdrop-filter:blur(7px)}
+.video-cta::after{content:" ↗";font-size:.9em}.project-block[data-project="cat-ip"] .video-cta,.project-block[data-project="workflow"] .video-cta{background:#121b1de8;border-color:#69c9db;color:#e9f7f8}
+@page{size:16in 9in;margin:0}
+@media print{
+  html,body{margin:0!important;padding:0!important;background:#fff!important}
+  main,.project-block{display:block!important;margin:0!important;padding:0!important}
+  .sheet{display:block!important;width:16in!important;height:9in!important;max-width:none!important;margin:0!important;box-shadow:none!important;break-after:page;page-break-after:always}
+  .sheet:last-child{break-after:auto;page-break-after:auto}
+  video{background:#090d0e}
+}
